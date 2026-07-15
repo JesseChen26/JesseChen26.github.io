@@ -1,4 +1,4 @@
-# 陈家曦个人网站 GitHub Pages 版本
+# 个人网站 GitHub Pages 版本
 
 这个文件夹可以直接上传到 GitHub Pages。
 
