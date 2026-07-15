@@ -17,7 +17,6 @@
 
    - `index.html`
    - `styles.css`
-   - `chen-jiaxi-acoustic-engineer-resume.docx`
    - `README.md`
 
 4. 打开仓库的 `Settings` -> `Pages`。
