@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>科研与项目 | 陈家曦</title>
+    <meta name="description" content="陈家曦的科研成果与项目经历，包括海底声散射、深海混响和 COMSOL 声学仿真。" />
+    <meta name="theme-color" content="#4051b5" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <button class="menu-button" type="button" aria-label="打开目录" aria-expanded="false">☰</button>
+        <a class="site-title" href="index.html">陈家曦的个人主页</a>
+        <nav class="top-nav" aria-label="页面导航">
+          <a href="index.html">首页</a>
+          <a class="active" href="research.html">科研与项目</a>
+        </nav>
+        <button class="theme-button" type="button" aria-label="切换明暗主题">◐</button>
+      </div>
+    </header>
+
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="网站目录">
+        <div class="profile-summary">
+          <img src="profile.jpg" alt="陈家曦个人照片" width="120" height="120" />
+          <strong>陈家曦</strong>
+          <span>Jiaxi Chen</span>
+          <p>海洋声学硕士研究生</p>
+        </div>
+        <nav class="side-nav">
+          <a href="index.html">首页</a>
+          <a class="active" href="research.html">科研成果与项目经历</a>
+          <a href="#research">科研成果</a>
+          <a href="#projects">项目经历</a>
+        </nav>
+      </aside>
+
+      <main class="document">
+        <div class="breadcrumbs"><a href="index.html">首页</a><span>›</span><span>科研与项目</span></div>
+        <article>
+          <header class="page-heading">
+            <p class="eyebrow">RESEARCH & PROJECTS</p>
+            <h1>科研成果与项目经历</h1>
+            <p class="page-lead">围绕海底声散射、深海多途混响、路径分辨有效散射区域和室内声场仿真开展研究与工程实践。</p>
+          </header>
+
+          <section id="research">
+            <h2>科研成果</h2>
+
+            <article class="entry">
+              <div class="entry-meta"><span>发明专利</span><strong>第一发明人</strong></div>
+              <h3>一种基于射线理论的海底前向散射强度计算方法及系统</h3>
+              <p>
+                构建二维射线追踪模型，以 N×2D 方法生成三维海底散射区域，并通过三角剖分计算等时线有效散射面积，实现复杂海洋环境下海底前向散射强度的高效计算。
+              </p>
+              <ul>
+                <li>公开号：CN122239062A</li>
+                <li>模型总不确定度小于 3 dB</li>
+                <li>关键词：射线追踪、前向散射、有效散射面积、三角剖分</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-meta"><span>SCI 论文</span><strong>第五作者</strong></div>
+              <h3>Acoustic Backscattering from Fine Sand Seabed at 12–24 kHz in South Yellow Sea</h3>
+              <p>
+                围绕南黄海细砂质海底 12–24 kHz 反向声散射强度测量与散射机理开展研究，分析粗糙界面散射和沉积物体积散射的贡献。
+              </p>
+              <ul>
+                <li>有效密度流体模型</li>
+                <li>海底声散射强度测量与预报</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-meta"><span>在投论文</span><strong>第一作者</strong></div>
+              <h3>Ray-tracing-based modeling of path-resolved effective scattering regions for deep-water reverberation</h3>
+              <p>
+                针对深海多途混响中有效散射区域的非规则分布问题，建立路径分辨混响强度模型，并使用南海深海实测数据进行验证。
+              </p>
+              <ul>
+                <li>海面与海底散射联合建模</li>
+                <li>仿真混响级与实测结果误差小于 3 dB</li>
+              </ul>
+            </article>
+          </section>
+
+          <section id="projects">
+            <h2>项目经历</h2>
+
+            <article class="entry project-entry">
+              <div class="entry-meta"><span>2024.09—至今</span><strong>国家重点项目</strong></div>
+              <h3>海底声散射模型研究</h3>
+              <p>
+                随航开展 23 天海上试验，参与实测数据采集、整理和初步分析；基于射线理论完成水声传播路径分析、参数计算和结果可视化，支撑项目验收材料撰写。
+              </p>
+              <div class="tag-list compact">
+                <span>海上试验</span><span>水声数据</span><span>射线理论</span><span>MATLAB</span><span>结果可视化</span>
+              </div>
+            </article>
+
+            <article class="entry project-entry">
+              <div class="entry-meta"><span>2026</span><strong>COMSOL 仿真</strong></div>
+              <h3>智能扬声器室内脉冲响应仿真</h3>
+              <p>
+                建立小型房间—智能扬声器室内声场模型。低频采用压力声学频域与集总扬声器模型，高频采用射线声学模型，输出声压级、传递函数、脉冲响应和混响时间。
+              </p>
+              <div class="tag-list compact">
+                <span>COMSOL</span><span>压力声学</span><span>射线声学</span><span>脉冲响应</span><span>混响时间</span>
+              </div>
+            </article>
+          </section>
+
+          <footer class="document-footer">
+            <a href="index.html">← 上一页：首页</a>
+            <span>最后更新：2026 年 8 月</span>
+          </footer>
+        </article>
+      </main>
+
+      <aside class="toc" aria-label="本页目录">
+        <strong>本页目录</strong>
+        <a href="#research">科研成果</a>
+        <a href="#projects">项目经历</a>
+      </aside>
+    </div>
+  </body>
+</html>

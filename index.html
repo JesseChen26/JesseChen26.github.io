@@ -3,213 +3,151 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>陈家曦 | 声学工程师</title>
+    <title>陈家曦的个人主页</title>
     <meta
       name="description"
-      content="陈家曦的个人网站，展示海洋声学、水声建模、海底声散射、深海混响与 COMSOL 声学仿真相关经历。"
+      content="陈家曦的个人主页：海洋声学、水声算法、声学仿真、个人经历与联系方式。"
     />
-    <meta name="theme-color" content="#f7f4ec" />
-    <meta property="og:title" content="陈家曦 | 海洋声学与声学工程" />
-    <meta
-      property="og:description"
-      content="海洋声学硕士研究生，关注水声传播、海底声散射、深海混响建模与声学仿真。"
-    />
+    <meta name="theme-color" content="#4051b5" />
+    <meta property="og:title" content="陈家曦的个人主页" />
+    <meta property="og:description" content="海洋声学硕士研究生，关注水声传播、海底声散射和声学仿真。" />
     <meta property="og:image" content="https://jessechen26.github.io/profile.jpg" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="hero" id="top">
-        <nav class="nav" aria-label="主要导航">
-          <a class="brand" href="#top" aria-label="陈家曦个人网站首页">CJX</a>
-          <div class="nav-links">
-            <a href="#research">科研</a>
-            <a href="#projects">项目</a>
-            <a href="#skills">能力</a>
-            <a href="#contact">联系</a>
-          </div>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <button class="menu-button" type="button" aria-label="打开目录" aria-expanded="false">☰</button>
+        <a class="site-title" href="index.html">陈家曦的个人主页</a>
+        <nav class="top-nav" aria-label="页面导航">
+          <a class="active" href="index.html">首页</a>
+          <a href="research.html">科研与项目</a>
         </nav>
+        <button class="theme-button" type="button" aria-label="切换明暗主题">◐</button>
+      </div>
+    </header>
 
-        <div class="hero-grid">
-          <aside class="profile-card" aria-label="陈家曦个人简介">
-            <div class="portrait-frame">
-              <img
-                class="portrait"
-                src="profile.jpg"
-                alt="陈家曦在海上试验期间的个人照片"
-                width="360"
-                height="360"
-              />
-            </div>
-            <p class="profile-name">陈家曦 <span>Jiaxi Chen</span></p>
-            <p class="profile-role">海洋声学硕士研究生</p>
-            <ul class="profile-facts">
-              <li>哈尔滨工程大学 · 水声工程学院</li>
-              <li>声学工程 · 水声算法 · 声学仿真</li>
-            </ul>
-          </aside>
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="网站目录">
+        <div class="profile-summary">
+          <img src="profile.jpg" alt="陈家曦个人照片" width="120" height="120" />
+          <strong>陈家曦</strong>
+          <span>Jiaxi Chen</span>
+          <p>海洋声学硕士研究生</p>
+        </div>
+        <nav class="side-nav">
+          <a class="active" href="index.html">首页</a>
+          <a href="#about">个人简介</a>
+          <a href="#contact">联系方式</a>
+          <a href="#skills">技术能力</a>
+          <a href="#experience">个人经历</a>
+          <a href="research.html">科研成果与项目经历</a>
+        </nav>
+      </aside>
 
-          <div class="hero-copy">
-            <p class="eyebrow">Ocean Acoustics · Acoustic Engineering</p>
-            <h1>用可验证的模型，<br />理解复杂声场。</h1>
-            <p class="lead">
-              我关注水声传播、海底声散射、深海混响建模与声学仿真，擅长把射线理论、实测数据和工程软件结合起来，形成可复现、可验证的声学分析结果。
+      <main class="document">
+        <div class="breadcrumbs"><span>首页</span></div>
+        <article>
+          <header class="page-heading" id="about">
+            <p class="eyebrow">ABOUT ME</p>
+            <h1>你好，我是陈家曦</h1>
+            <p class="page-lead">
+              哈尔滨工程大学水声工程学院海洋声学专业硕士研究生，关注水声传播、海底声散射、深海混响建模与声学仿真。
             </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#research">查看科研成果</a>
-              <a class="button secondary" href="#contact">联系我</a>
-            </div>
-            <div class="proof-grid" aria-label="研究与实践数据">
-              <div><strong>&lt; 3 dB</strong><span>仿真与实测误差</span></div>
-              <div><strong>23 天</strong><span>海上试验经历</span></div>
-              <div><strong>12–24 kHz</strong><span>散射测量频段</span></div>
-            </div>
+          </header>
+
+          <div class="note">
+            <strong>研究方向</strong>
+            <p>海洋声学 · 水声算法 · 射线追踪 · 海底声散射 · 深海混响 · 声学仿真</p>
           </div>
-        </div>
-      </section>
 
-      <section class="band intro">
-        <div>
-          <span class="section-kicker">Education</span>
-          <h2>水声工程与海洋技术背景</h2>
-        </div>
-        <div class="education">
-          <article>
-            <h3>哈尔滨工程大学 · 水声工程学院</h3>
-            <p>海洋声学，硕士研究生 / 2024.09 - 2027.06</p>
-            <span>GPA 3.73 / 5.00，专业排名 10/50</span>
-          </article>
-          <article>
-            <h3>广东海洋大学 · 电子信息工程学院</h3>
-            <p>海洋技术，工学学士 / 2020.09 - 2024.06</p>
-            <span>GPA 3.68 / 5.00，专业排名 6/63</span>
-          </article>
-        </div>
-      </section>
+          <p>
+            我的工作主要围绕复杂海洋环境中的声传播与散射问题展开。擅长将射线理论、实测数据和工程软件结合起来，建立可复现、可验证的声学模型，并完成数据分析、结果可视化和技术报告交付。
+          </p>
+          <p>
+            目前希望寻找声学工程、水声算法、信号处理或仿真研发相关的工作机会。科研成果和项目详情请查看
+            <a href="research.html">科研与项目</a>。
+          </p>
 
-      <section class="section" id="research">
-        <div class="section-heading">
-          <span class="section-kicker">Research</span>
-          <h2>科研成果</h2>
-        </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <div class="card-topline">
-              <span>发明专利</span>
-              <strong>第一发明人</strong>
+          <section id="contact">
+            <h2>联系方式</h2>
+            <div class="info-list">
+              <div><span>邮箱</span><a href="mailto:635775353@qq.com">635775353@qq.com</a></div>
+              <div><span>GitHub</span><a href="https://github.com/JesseChen26">JesseChen26</a></div>
+              <div><span>学校</span><strong>哈尔滨工程大学</strong></div>
+              <div><span>求职方向</span><strong>声学工程 / 水声算法 / 仿真研发</strong></div>
             </div>
-            <h3>一种基于射线理论的海底前向散射强度计算方法及系统</h3>
-            <p>
-              构建二维射线追踪模型，以 N×2D 方法生成三维海底散射区域，并用三角剖分计算等时线有效散射面积，实现复杂海洋环境下海底前向散射强度的高效计算。
-            </p>
-            <small>公开号 CN122239062A / 总不确定度小于 3 dB</small>
-          </article>
+          </section>
 
-          <article class="research-card">
-            <div class="card-topline">
-              <span>SCI 论文</span>
-              <strong>第五作者</strong>
+          <section id="skills">
+            <h2>技术能力</h2>
+            <h3>编程与数据分析</h3>
+            <div class="tag-list">
+              <span>MATLAB</span><span>Python</span><span>C++</span><span>信号处理</span><span>数据可视化</span>
             </div>
-            <h3>Acoustic Backscattering from Fine Sand Seabed at 12-24kHz in South Yellow Sea</h3>
-            <p>
-              围绕细砂质海底 12-24 kHz 反向声散射强度测量与散射机理开展研究，分析粗糙界面散射与沉积物体积散射贡献。
-            </p>
-            <small>有效密度流体模型 / 散射强度预报</small>
-          </article>
 
-          <article class="research-card">
-            <div class="card-topline">
-              <span>在投论文</span>
-              <strong>第一作者</strong>
+            <h3>建模与工程软件</h3>
+            <div class="tag-list">
+              <span>COMSOL Multiphysics</span><span>SolidWorks</span><span>ArcGIS</span><span>Adobe Audition</span><span>Photoshop</span>
             </div>
-            <h3>Ray-tracing-based modeling of path-resolved effective scattering regions for deep-water reverberation</h3>
-            <p>
-              针对深海多途混响中有效散射区域非规则分布问题，建立路径分辨混响强度模型，并以南海深海实测数据验证。
-            </p>
-            <small>海面/海底散射 / 混响级误差小于 3 dB</small>
-          </article>
-        </div>
-      </section>
 
-      <section class="section split" id="projects">
-        <div class="section-heading sticky-heading">
-          <span class="section-kicker">Projects</span>
-          <h2>项目经历</h2>
-          <p>研究经验覆盖海试数据、声传播路径分析、散射模型计算、房间声学仿真和报告交付。</p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="time">2024.09 - 至今</div>
-            <div>
-              <span class="pill">国家重点项目</span>
-              <h3>海底声散射模型研究</h3>
-              <p>
-                随航开展 23 天海上试验，参与实测数据采集、整理与初步分析；基于射线理论完成水声传播路径分析、参数计算和结果可视化，支撑项目验收材料撰写。
-              </p>
+            <h3>专业能力</h3>
+            <div class="tag-list">
+              <span>水声测量</span><span>射线追踪</span><span>海底声散射</span><span>深海混响</span><span>声场仿真</span>
             </div>
-          </article>
+          </section>
 
-          <article class="timeline-item">
-            <div class="time">2026</div>
-            <div>
-              <span class="pill">COMSOL 仿真</span>
-              <h3>智能扬声器室内脉冲响应仿真</h3>
-              <p>
-                建立小型房间-智能扬声器室内声场模型，低频采用压力声学频域与集总扬声器模型，高频采用射线声学模型，输出声压级、传递函数、脉冲响应和混响时间。
-              </p>
+          <section id="experience">
+            <h2>个人经历</h2>
+            <div class="history">
+              <article>
+                <div class="history-time">2024.09—2027.06</div>
+                <div>
+                  <h3>哈尔滨工程大学 · 水声工程学院</h3>
+                  <p>海洋声学，硕士研究生</p>
+                  <ul>
+                    <li>GPA：3.73 / 5.00，专业排名 10 / 50</li>
+                    <li>海战场党支部组织委员</li>
+                    <li>优秀五四青年、优秀班干部、优秀学生奖学金二等奖</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article>
+                <div class="history-time">2020.09—2024.06</div>
+                <div>
+                  <h3>广东海洋大学 · 电子信息工程学院</h3>
+                  <p>海洋技术，工学学士</p>
+                  <ul>
+                    <li>GPA：3.68 / 5.00，专业排名 6 / 63</li>
+                    <li>海洋技术系辅导员助理、海技1202班班长</li>
+                    <li>优秀毕业生、优秀学生奖学金三等奖</li>
+                  </ul>
+                </div>
+              </article>
             </div>
-          </article>
-        </div>
-      </section>
 
-      <section class="section skills" id="skills">
-        <div class="section-heading">
-          <span class="section-kicker">Toolkit</span>
-          <h2>技术能力</h2>
-        </div>
-        <div class="skill-cloud">
-          <span>MATLAB</span>
-          <span>Python</span>
-          <span>C++</span>
-          <span>COMSOL Multiphysics</span>
-          <span>SolidWorks</span>
-          <span>ArcGIS</span>
-          <span>Adobe Audition</span>
-          <span>Adobe Photoshop</span>
-          <span>水声测量</span>
-          <span>信号处理</span>
-          <span>射线追踪</span>
-          <span>声场仿真</span>
-        </div>
-      </section>
+            <h3>其他荣誉</h3>
+            <ul>
+              <li>东北三省数学建模大赛省级二等奖</li>
+            </ul>
+          </section>
 
-      <section class="band achievements">
-        <div class="section-heading">
-          <span class="section-kicker">Awards & Campus</span>
-          <h2>获奖与校园经历</h2>
-        </div>
-        <div class="award-list">
-          <span>东北三省数学建模大赛省级二等奖</span>
-          <span>哈尔滨工程大学优秀五四青年、优秀班干部</span>
-          <span>哈尔滨工程大学优秀学生奖学金二等奖</span>
-          <span>广东海洋大学优秀学生奖学金三等奖</span>
-          <span>广东海洋大学优秀毕业生</span>
-        </div>
-        <div class="campus">
-          <p>哈尔滨工程大学海战场党支部组织委员 / 2024.09 至今</p>
-          <p>广东海洋大学海洋技术系辅导员助理、海技1202班班长 / 2020.09 - 2024.06</p>
-        </div>
-      </section>
+          <footer class="document-footer">
+            <span>最后更新：2026 年 8 月</span>
+            <a href="research.html">下一页：科研与项目 →</a>
+          </footer>
+        </article>
+      </main>
 
-      <section class="contact" id="contact">
-        <div>
-          <span class="section-kicker">Contact</span>
-          <h2>期待声学工程、水声算法与仿真研发相关机会</h2>
-        </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:635775353@qq.com">发送邮件</a>
-        </div>
-      </section>
-    </main>
+      <aside class="toc" aria-label="本页目录">
+        <strong>本页目录</strong>
+        <a href="#about">个人简介</a>
+        <a href="#contact">联系方式</a>
+        <a href="#skills">技术能力</a>
+        <a href="#experience">个人经历</a>
+      </aside>
+    </div>
   </body>
 </html>
