@@ -8,6 +8,13 @@
       name="description"
       content="陈家曦的个人网站，展示海洋声学、水声建模、海底声散射、深海混响与 COMSOL 声学仿真相关经历。"
     />
+    <meta name="theme-color" content="#f7f4ec" />
+    <meta property="og:title" content="陈家曦 | 海洋声学与声学工程" />
+    <meta
+      property="og:description"
+      content="海洋声学硕士研究生，关注水声传播、海底声散射、深海混响建模与声学仿真。"
+    />
+    <meta property="og:image" content="https://jessechen26.github.io/profile.jpg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,57 +31,38 @@
         </nav>
 
         <div class="hero-grid">
+          <aside class="profile-card" aria-label="陈家曦个人简介">
+            <div class="portrait-frame">
+              <img
+                class="portrait"
+                src="profile.jpg"
+                alt="陈家曦在海上试验期间的个人照片"
+                width="360"
+                height="360"
+              />
+            </div>
+            <p class="profile-name">陈家曦 <span>Jiaxi Chen</span></p>
+            <p class="profile-role">海洋声学硕士研究生</p>
+            <ul class="profile-facts">
+              <li>哈尔滨工程大学 · 水声工程学院</li>
+              <li>声学工程 · 水声算法 · 声学仿真</li>
+            </ul>
+          </aside>
+
           <div class="hero-copy">
             <p class="eyebrow">Ocean Acoustics · Acoustic Engineering</p>
-            <h1>陈家曦</h1>
+            <h1>用可验证的模型，<br />理解复杂声场。</h1>
             <p class="lead">
-              海洋声学硕士研究生，关注水声传播、海底声散射、深海混响建模与声学仿真。擅长把射线理论、实测数据和工程软件结合起来，产出可验证的声学模型与分析结果。
+              我关注水声传播、海底声散射、深海混响建模与声学仿真，擅长把射线理论、实测数据和工程软件结合起来，形成可复现、可验证的声学分析结果。
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#research">查看成果</a>
+              <a class="button primary" href="#research">查看科研成果</a>
               <a class="button secondary" href="#contact">联系我</a>
             </div>
-          </div>
-
-          <div class="acoustic-panel" aria-label="深海混合边界混响有效散射区域示意">
-            <div class="figure-title">
-              <span>Ray acoustics schematic</span>
-              <strong>有效散射区域建模</strong>
-            </div>
-            <div class="acoustic-figure">
-              <div class="surface-line"></div>
-              <div class="water-column">
-                <span class="source-dot"></span>
-                <span class="receiver-dot"></span>
-                <span class="ray ray-direct"></span>
-                <span class="ray ray-surface"></span>
-                <span class="ray ray-bottom"></span>
-                <span class="ray ray-scatter"></span>
-                <span class="scatter-zone"></span>
-                <span class="label label-source">声源</span>
-                <span class="label label-receiver">接收</span>
-                <span class="label label-zone">路径分辨有效散射区</span>
-              </div>
-              <div class="seabed">
-                <span class="sediment sediment-a"></span>
-                <span class="sediment sediment-b"></span>
-                <span class="sediment sediment-c"></span>
-              </div>
-              <div class="axis-note">海面 / 水体 / 海底混合边界</div>
-            </div>
-            <div class="metrics">
-              <div>
-                <strong>&lt; 3 dB</strong>
-                <span>仿真与实测误差</span>
-              </div>
-              <div>
-                <strong>23 天</strong>
-                <span>海上试验经历</span>
-              </div>
-              <div>
-                <strong>12-24 kHz</strong>
-                <span>散射测量频段</span>
-              </div>
+            <div class="proof-grid" aria-label="研究与实践数据">
+              <div><strong>&lt; 3 dB</strong><span>仿真与实测误差</span></div>
+              <div><strong>23 天</strong><span>海上试验经历</span></div>
+              <div><strong>12–24 kHz</strong><span>散射测量频段</span></div>
             </div>
           </div>
         </div>
