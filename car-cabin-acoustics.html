@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>车载座舱音响系统声学响应仿真 | 陈家曦</title>
+    <meta
+      name="description"
+      content="基于COMSOL开展车载座舱低频压力声学与高频射线声学分析，研究扬声器参数和内饰吸声特性对多座位声学响应的影响。"
+    />
+    <meta name="theme-color" content="#4051b5" />
+    <meta property="og:title" content="车载座舱音响系统声学响应仿真" />
+    <meta property="og:description" content="四座位低频响应优化、高频内饰吸声参数分析及数值收敛验证。" />
+    <meta property="og:image" content="https://jessechen26.github.io/assets/car-cabin/cabin-model.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <button class="menu-button" type="button" aria-label="打开目录" aria-expanded="false">☰</button>
+        <a class="site-title" href="index.html">陈家曦的个人主页</a>
+        <nav class="top-nav" aria-label="页面导航">
+          <a href="index.html">首页</a>
+          <a class="active" href="research.html">科研与项目</a>
+        </nav>
+        <button class="theme-button" type="button" aria-label="切换明暗主题">◐</button>
+      </div>
+    </header>
+
+    <div class="page-shell project-page-shell">
+      <aside class="sidebar" aria-label="网站目录">
+        <div class="profile-summary">
+          <img src="profile.jpg" alt="陈家曦个人照片" width="120" height="120" />
+          <strong>陈家曦</strong>
+          <span>Jiaxi Chen</span>
+          <p>硕士研究生</p>
+        </div>
+        <nav class="side-nav">
+          <a href="index.html">首页</a>
+          <a href="research.html">科研成果与项目经历</a>
+          <a href="tws-acoustics.html">TWS耳机声学仿真</a>
+          <a class="active" href="car-cabin-acoustics.html">车载座舱声学仿真</a>
+          <a href="#background">项目背景</a>
+          <a href="#modeling">建模方案</a>
+          <a href="#baseline">模型与基线</a>
+          <a href="#seats">多座位响应</a>
+          <a href="#low-frequency">低频方案优化</a>
+          <a href="#high-frequency">高频射线声学</a>
+          <a href="#convergence">数值验证</a>
+          <a href="#conclusions">项目结论</a>
+        </nav>
+      </aside>
+
+      <main class="document">
+        <div class="breadcrumbs">
+          <a href="index.html">首页</a><span>›</span><a href="research.html">科研与项目</a><span>›</span><span>车载座舱声学仿真</span>
+        </div>
+        <article>
+          <header class="page-heading project-heading">
+            <p class="eyebrow">COMSOL CABIN ACOUSTICS</p>
+            <h1>基于 COMSOL 的车载座舱音响系统声学响应仿真</h1>
+            <p class="page-lead">面向封闭座舱低频模态起伏与多座位响应不一致问题，建立低频压力声学与高频射线声学联合分析流程，研究扬声器参数和内饰吸声特性对座舱声场的影响。</p>
+            <p class="project-meta">负责模型复现、接收点构建、参数扫描、方案优化与数值验证｜2026.05—2026.07</p>
+          </header>
+
+          <div class="note result-note">
+            <strong>核心结果</strong>
+            <p>中低音与高音组合采用高音相对增益 -3 dB、延时 0.125 ms 后，200–1000 Hz 四座位平均响应极差由 10.59 dB 降至 9.03 dB，最大座位间离散度由 33.26 dB 降至 21.90 dB；高频稳健方案使 2、4、8 kHz 四座位能量离散度平均降低 17.66%。</p>
+          </div>
+
+          <section id="background">
+            <h2>项目背景</h2>
+            <p>车内空间封闭且几何不规则，低频响应容易受到座舱模态和扬声器相位关系影响，不同座位之间常出现明显峰谷差异；进入中高频后，声场又受到内饰吸声、遮挡和多次反射的共同作用。因此，本项目将低频波动问题与高频能量衰减问题分别建模，再以多座位一致性作为共同评价目标。</p>
+          </section>
+
+          <section id="modeling">
+            <h2>建模方案</h2>
+            <ol class="workflow-list">
+              <li>复现 COMSOL 官方车载座舱频域模型，检查几何、声源、吸声边界、网格与求解设置。</li>
+              <li>在压力声学频域模型中设置四个座位接收点，计算 50–1000 Hz 耳位声压响应。</li>
+              <li>分离中低音和高音扬声器的复声压贡献，扫描相对增益、延时与极性，优化四座位平均响应和座位间离散度。</li>
+              <li>在射线声学模型中计算 2、4、8 kHz 接收能量、EDT 和 T20，并扫描座椅、地毯、车窗与仪表板吸声参数。</li>
+              <li>通过直接重算、射线数收敛和随机种子重复计算验证数值结果。</li>
+            </ol>
+          </section>
+
+          <section id="baseline">
+            <h2>模型与频域基线</h2>
+            <figure class="project-figure">
+              <img src="assets/car-cabin/cabin-model.png" alt="车载座舱声学模型及扬声器布置" loading="lazy" />
+              <figcaption><strong>图1</strong>　车载座舱声学模型及扬声器布置</figcaption>
+            </figure>
+            <p>模型保留车门、车窗、座椅、顶棚、地毯和仪表板等主要几何与声学边界。低频采用压力声学频域接口求解座舱内复声压，高频采用射线声学描述声线传播、反射和材料吸收。公开案例几何用于建立方法流程，不对应具体量产车型。</p>
+
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/cabin-pressure-1000hz.png" alt="1000 Hz座舱声压级等值面" loading="lazy" />
+              <figcaption><strong>图2</strong>　1 kHz 座舱声压级等值面</figcaption>
+            </figure>
+            <p>频域基线结果显示，座舱内声压并非均匀分布。边界反射和有限空间内的波动叠加在不同位置形成峰谷，因此单一测点不能代表整车听音区域，需要同时比较多个座位接收点。</p>
+          </section>
+
+          <section id="seats">
+            <h2>四座位接收点与声源组合</h2>
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/four-seat-speaker-comparison.png" alt="不同扬声器组合下四座位频率响应对比" loading="lazy" />
+              <figcaption><strong>图3</strong>　不同扬声器组合下的四座位频率响应</figcaption>
+            </figure>
+            <p>在驾驶位、副驾驶位和后排左右座位的头部区域设置接收点，比较中低音单独工作与中低音、高音共同工作时的 50–1000 Hz 响应。四座位结果均来自修正后的真实座位坐标；早期用于流程检查的临时后排点不参与本页统计。</p>
+            <p>不同声源组合在部分频段出现增强或抵消，说明多扬声器叠加不能只比较幅值，还必须保留复声压的相位信息。</p>
+          </section>
+
+          <section id="low-frequency">
+            <h2>低频增益与延时优化</h2>
+            <p>以中低音复声压为基准，对高音声源施加相对增益 <code>G</code> 和延时 <code>τ</code>，各座位总声压按下式合成：</p>
+            <p><code>p(f) = p<sub>MW</sub>(f) + G · p<sub>TW</sub>(f) · exp(-i2πfτ)</code></p>
+            <p>参数扫描同时评价 200–1000 Hz 四座位平均响应的频带极差和同频座位间离散度，避免只优化单个座位或单个频点。</p>
+
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/low-frequency-spread-optimization.png" alt="优化前后四座位离散度对比" loading="lazy" />
+              <figcaption><strong>图4</strong>　低频方案优化前后的座位间离散度</figcaption>
+            </figure>
+
+            <div class="result-grid" aria-label="低频优化结果">
+              <div><strong>-3 dB</strong><span>高音相对增益</span></div>
+              <div><strong>0.125 ms</strong><span>高音延时</span></div>
+              <div><strong>10.59 → 9.03 dB</strong><span>平均响应极差</span></div>
+              <div><strong>33.26 → 21.90 dB</strong><span>最大座位间离散度</span></div>
+            </div>
+            <p>为排除离线复数叠加的实现误差，将最优参数重新写入 COMSOL 并直接求解。直接重算与离线合成结果的最大 SPL 差为 0.0073 dB，均方根差为 0.0013 dB。</p>
+          </section>
+
+          <section id="high-frequency">
+            <h2>高频射线声学与材料参数</h2>
+            <p>高频模型在 2、4、8 kHz 发射声线，并在四个座位头部区域设置半径 0.10 m 的虚拟接收球。接收能量用于比较座位间相对差异；对能量衰减曲线进行 Schroeder 反向积分，并分别在 0 至 -10 dB 和 -5 至 -25 dB 区间拟合 EDT 与 T20。</p>
+            <p>分别改变座椅、地毯、车窗和仪表板的吸声系数，考察材料参数对多座位能量一致性和衰减时间的影响。高频部分以接收能量与衰减指标为结论依据，不把声线路径截图作为定量结果。</p>
+          </section>
+
+          <section id="convergence">
+            <h2>射线数与随机种子验证</h2>
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/ray-convergence.png" alt="高频模型射线数收敛结果" loading="lazy" />
+              <figcaption><strong>图5</strong>　高频模型的射线数收敛结果</figcaption>
+            </figure>
+            <p>以 80,000 条射线为参考，40,000 条射线计算的最大座位能量误差为 0.3008 dB，平均 T20 误差为 0.9669%。在 4 kHz 使用 20,000 条射线进行五组随机种子重复计算时，最大座位能量极差为 0.3201 dB，最大 T20 变异系数为 2.04%。据此采用 20,000 条射线快速筛选参数，并以 40,000 条射线复核最终方案。</p>
+          </section>
+
+          <section id="materials">
+            <h2>内饰吸声稳健方案</h2>
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/robust-seat-uniformity.png" alt="基线与稳健材料方案的四座位能量离散度" loading="lazy" />
+              <figcaption><strong>图6</strong>　基线与稳健材料方案的四座位能量离散度</figcaption>
+            </figure>
+            <p>综合多频点结果，采用座椅吸声系数倍率 0.7、仪表板倍率 1.3，地毯与车窗保持基线。该方案在 2、4、8 kHz 使四座位接收能量离散度分别降低 17.69%、17.71% 和 17.56%，平均降低 17.66%。</p>
+
+            <figure class="project-figure figure-wide">
+              <img src="assets/car-cabin/robust-edt-t20.png" alt="稳健材料方案对EDT和T20的影响" loading="lazy" />
+              <figcaption><strong>图7</strong>　稳健材料方案对 EDT 与 T20 的影响</figcaption>
+            </figure>
+            <p>方案改善座位间能量一致性的同时，T20 最大变化控制在 4.77% 以内；EDT 约增加 17%。这说明材料方案并非简单增加全舱吸声，而是在座位一致性和早期衰减特性之间进行折中。</p>
+          </section>
+
+          <section id="conclusions">
+            <h2>项目结论</h2>
+            <div class="conclusion-grid">
+              <article><strong>低频相位关系</strong><p>扬声器的相对增益和延时会改变复声压叠加，可用于缓解多座位响应峰谷与离散。</p></article>
+              <article><strong>高频材料作用</strong><p>内饰吸声分配会同时影响接收能量均匀性、EDT 和 T20，需要以多指标筛选方案。</p></article>
+              <article><strong>多座位评价</strong><p>单点最优不等于整舱最优，四座位平均响应和座位间离散度应联合评估。</p></article>
+              <article><strong>数值可信度</strong><p>直接重算、射线数收敛和随机种子重复计算为参数优化结果提供数值检查。</p></article>
+            </div>
+          </section>
+
+          <section id="limitations">
+            <h2>模型边界</h2>
+            <div class="note caution-note">
+              <strong>结果适用范围</strong>
+              <p>本项目基于公开案例几何与材料参数建立方法流程，尚未使用实车测量数据反标，因此结果用于比较方案相对变化，不代表具体车型的绝对声压级或混响指标。射线声学接收量为相对能量级，不能直接等同于以 20 μPa 为参考的绝对 SPL；低频与高频模型也尚未合成为经实测校准的全频响应。</p>
+            </div>
+          </section>
+
+          <footer class="document-footer">
+            <a href="research.html">← 返回：科研与项目</a>
+            <span>最后更新：2026 年 8 月</span>
+          </footer>
+        </article>
+      </main>
+
+      <aside class="toc" aria-label="本页目录">
+        <strong>本页目录</strong>
+        <a href="#background">项目背景</a>
+        <a href="#modeling">建模方案</a>
+        <a href="#baseline">模型与基线</a>
+        <a href="#seats">多座位响应</a>
+        <a href="#low-frequency">低频方案优化</a>
+        <a href="#high-frequency">高频射线声学</a>
+        <a href="#convergence">数值验证</a>
+        <a href="#materials">材料方案</a>
+        <a href="#conclusions">项目结论</a>
+      </aside>
+    </div>
+  </body>
+</html>
