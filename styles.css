@@ -104,7 +104,7 @@ a:hover { color: var(--accent); }
 
 .page-shell {
   display: grid;
-  grid-template-columns: 245px minmax(0, 780px) 180px;
+  grid-template-columns: 286px minmax(0, 780px) 180px;
   gap: 46px;
   width: min(100% - 48px, 1320px);
   margin: 0 auto;
@@ -122,11 +122,11 @@ a:hover { color: var(--accent); }
 }
 
 .profile-summary img {
-  width: 104px;
-  height: 104px;
+  width: 250px;
+  height: 250px;
   margin-bottom: 15px;
   border: 3px solid var(--background);
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
   object-position: center 30%;
   box-shadow: 0 2px 12px rgba(38, 50, 56, 0.24);
@@ -305,7 +305,7 @@ th { color: var(--primary); background: var(--surface); }
 .toc a:hover { color: var(--primary); }
 
 @media (max-width: 1080px) {
-  .page-shell { grid-template-columns: 225px minmax(0, 760px); }
+  .page-shell { grid-template-columns: 286px minmax(0, 760px); }
   .toc { display: none; }
 }
 
