@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PPT Workflow：分阶段演示文稿工作流 | 陈家曦</title>
+    <meta name="description" content="可复用的 PPT 工作流：材料分析、重点确认、章节与逐页设计、视觉规范、制作检查和交付归档。包含 Agent Skill、Python 脚本与使用说明。" />
+    <meta name="theme-color" content="#4051b5" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <button class="menu-button" type="button" aria-label="打开目录" aria-expanded="false">☰</button>
+        <a class="site-title" href="index.html">陈家曦的个人主页</a>
+        <nav class="top-nav" aria-label="页面导航">
+          <a href="index.html">首页</a>
+          <a class="active" href="research.html">科研与项目</a>
+        </nav>
+        <button class="theme-button" type="button" aria-label="切换明暗主题">◐</button>
+      </div>
+    </header>
+    <div class="page-shell">
+      <aside class="sidebar" aria-label="网站目录">
+        <div class="profile-summary">
+          <img src="profile-ai-headshot-relaxed.png?v=20261017" alt="陈家曦个人照片" width="250" height="250" />
+          <strong>陈家曦</strong><span>Jaycee Chen</span><p>硕士研究生</p>
+        </div>
+        <nav class="side-nav">
+          <a href="index.html">首页</a>
+          <a href="research.html">科研成果与项目经历</a>
+          <a class="active" href="ppt-workflow.html">PPT 工作流</a>
+          <a href="#purpose">项目起点</a>
+          <a href="#workflow">八阶段流程</a>
+          <a href="#reuse">复用与恢复</a>
+          <a href="#start">开始使用</a>
+        </nav>
+      </aside>
+      <main class="document">
+        <div class="breadcrumbs"><a href="index.html">首页</a><span>›</span><a href="research.html">科研与项目</a><span>›</span><span>PPT Workflow</span></div>
+        <article>
+          <header class="page-heading">
+            <p class="eyebrow">Open-source Workflow</p>
+            <h1>PPT Workflow</h1>
+            <p class="page-lead">从汇报重点到完整演示稿，让内容、设计与检查按阶段衔接。</p>
+            <div class="tag-list compact"><span>Agent Skill</span><span>Python 3.10+</span><span>中文技术汇报</span><span>MIT</span></div>
+            <p><a class="entry-link" href="https://github.com/JesseChen26/ppt-workflow">查看 GitHub 仓库 →</a></p>
+          </header>
+          <section id="purpose">
+            <h2>先明确要讲什么</h2>
+            <p>这个项目来自技术汇报制作中的实际需求：收到一份长文档后，需要先判断哪些内容对听众有用，与汇报者确认重点，再组织章节、证据和每页表达。完成这些决定，视觉设计才有明确依据。</p>
+            <p>工作流将这些决定保存为可复查的任务文件。需求变化时，回到最早受影响的阶段；中断后，从本地记录恢复进度。</p>
+          </section>
+          <section id="workflow">
+            <h2>八阶段流程</h2>
+            <ol>
+              <li><strong>明确任务：</strong>约定听众、目标、时长、材料范围与输出要求。</li>
+              <li><strong>整理材料：</strong>建立来源目录，保存材料快照并记录缺口。</li>
+              <li><strong>组织内容：</strong>确认汇报重点，再确定章节逻辑和逐页方案。</li>
+              <li><strong>确定视觉：</strong>选择模板或自由设计，用代表页检验信息层级与可读性。</li>
+              <li><strong>准备素材：</strong>整理图表、图片与数据，保留来源和适用条件。</li>
+              <li><strong>完整制作：</strong>按已确认方案制作页面与讲稿。</li>
+              <li><strong>检查修正：</strong>查看内容、视觉、可编辑性和最终导出。</li>
+              <li><strong>交付归档：</strong>整理最终文件、源文件及必要的复查记录。</li>
+            </ol>
+            <div class="note"><strong>关键确认点</strong><p>默认由用户确认任务、内容和视觉。内容阶段先讨论重点，再确认大纲；每个阶段完成检查后，才进入下一阶段。</p></div>
+          </section>
+          <section id="reuse">
+            <h2>复用方法，保留每次任务的差异</h2>
+            <h3>默认设置与本次要求</h3>
+            <p>默认采用中文、16:9、可编辑 PPTX 和讲稿。每次任务都重新明确目标与约束，并保存默认设置快照；后续修改默认值不会改变旧任务。</p>
+            <h3>变更回退与中断恢复</h3>
+            <p>脚本核对阶段产物与版本指纹。来源、大纲或视觉规范发生变化时，相应检查和确认需要重新完成。恢复任务时先检查文件状态，再继续最早未完成的阶段。</p>
+            <h3>实现范围</h3>
+            <p>仓库包含 Skill、流程脚本、通用设计参考与行为测试。流程脚本只依赖 Python 标准库；材料阅读和演示稿生成由助手配合可用工具完成。检查记录不能代替事实核对、逐页观看或演示软件中的兼容性验证。</p>
+          </section>
+          <section id="start">
+            <h2>开始使用</h2>
+            <p>进入仓库 README，按说明安装 Skill 或直接运行流程脚本。准备材料后，可以这样提出任务：</p>
+            <blockquote>使用 ppt-workflow，把这份报告制作成约 15 分钟的技术汇报。先分析材料并与我确认重点，再组织章节与逐页内容。</blockquote>
+            <p><a href="https://github.com/JesseChen26/ppt-workflow#快速使用">安装与使用说明</a> · <a href="https://github.com/JesseChen26/ppt-workflow/blob/main/SKILL.md">查看 Skill</a> · <a href="https://github.com/JesseChen26/ppt-workflow/actions">查看自动测试</a></p>
+          </section>
+          <footer class="document-footer"><a href="research.html#ppt-workflow">← 返回科研与项目</a><span>最后更新：2026 年 11 月 6 日</span></footer>
+        </article>
+      </main>
+      <aside class="toc" aria-label="本页目录">
+        <strong>本页目录</strong><a href="#purpose">项目起点</a><a href="#workflow">八阶段流程</a><a href="#reuse">复用与恢复</a><a href="#start">开始使用</a>
+      </aside>
+    </div>
+  </body>
+</html>
